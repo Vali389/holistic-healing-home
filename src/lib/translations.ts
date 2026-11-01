@@ -66,4 +66,11 @@ export const TRANSLATIONS: [string, string][] = [
   ["Ready to Transform Yourself and Your Family?", "మిమ్మల్ని మరియు మీ కుటుంబాన్ని మార్చుకోవడానికి సిద్ధమా?"],
   ["Book your personal healing session today and unlock immediate free access to all 4 transformative wellness bonuses curated by Nagasri Lakshmi Prakash.", "ఈరోజే మీ హీలింగ్ సెషన్ బుక్ చేసుకొని నాగశ్రీ లక్ష్మీ ప్రకాశ్ గారిచే రూపొందించిన 4 అద్భుతమైన బోనస్‌లను ఉచితంగా పొందండి."],
   ["Reserve your personalized 1-on-1 session right now and unlock all 4 bonuses (₹9,999/- value) at no extra charge before the countdown expires.", "కౌంట్‌డౌన్ ముగిసేలోపు మీ వ్యక్తిగత 1-ఆన్-1 సెషన్‌ను రిజర్వ్ చేసుకొని ₹9,999/- విలువైన బోనస్‌లను ఉచితంగా పొందండి."],
+  ["Official WhatsApp Community", "అధికారిక వాట్సాప్ కమ్యూనిటీ"],
+  ["Join Holistic Healing Home [HHH] Community", "హోలిస్టిక్ హీలింగ్ హోమ్ [HHH] కమ్యూనిటీలో చేరండి"],
+  ["Connect with a supportive family of over 2000+ members. Receive daily positive affirmations, morning motivation, healing insights, and exclusive announcements directly from Nagasri Lakshmi Prakash.", "2000 కంటే ఎక్కువ మంది సభ్యులతో కూడిన కుటుంబంలో చేరండి. నాగశ్రీ లక్ష్మీ ప్రకాశ్ గారి నుండి రోజువారీ సానుకూల ఆలోచనలు, మార్నింగ్ మోటివేషన్ మరియు హీలింగ్ మార్గదర్శకత్వం పొందండి."],
+  ["Join WhatsApp Community Now", "ఇప్పుడే వాట్సాప్ కమ్యూనిటీలో చేరండి"],
+  ["Scan or Click to Join", "స్కాన్ చేయండి లేదా క్లిక్ చేసి చేరండి"],
+  ["Scan this QR code using the WhatsApp camera to join this community", "ఈ కమ్యూనిటీలో చేరడానికి మీ వాట్సాప్ కెమెరాతో ఈ QR కోడ్‌ను స్కాన్ చేయండి"],
+  ["Free to join · Respectful & Sacred community", "ఉచితంగా చేరవచ్చు · పవిత్రమైన & గౌరవప్రదమైన కమ్యూనిటీ"],
 ];

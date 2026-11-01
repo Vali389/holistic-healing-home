@@ -1,5 +1,7 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "holistic-healing-home",
+  "version": "1.0.0",
+  "description": "Holistic Healing Home — Find New You, Create Happy Families",
   "private": true,
   "sideEffects": false,
   "type": "module",

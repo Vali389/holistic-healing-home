@@ -23,6 +23,7 @@ import { BonusesSection } from "@/components/site/BonusesSection";
 import { PhotoGallery } from "@/components/site/PhotoGallery";
 import { AnimatedCounter } from "@/components/site/AnimatedCounter";
 import { StickyBottomCTA } from "@/components/site/StickyBottomCTA";
+import { WhatsAppCommunitySection } from "@/components/site/WhatsAppCommunitySection";
 import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
@@ -687,6 +688,9 @@ function Index() {
           </a>
         </div>
       </section>
+
+      {/* WHATSAPP COMMUNITY SECTION */}
+      <WhatsAppCommunitySection />
 
       {/* FINAL CTA */}
       <section className="relative overflow-hidden">

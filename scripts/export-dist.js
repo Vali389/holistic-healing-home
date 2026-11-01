@@ -2,13 +2,20 @@ import fs from "node:fs";
 import path from "node:path";
 
 const rootDir = process.cwd();
-const outputPublicDir = path.join(rootDir, ".output", "public");
 const distDir = path.join(rootDir, "dist");
+const candidateDirs = [
+  path.join(rootDir, ".vercel", "output", "static"),
+  path.join(rootDir, ".output", "public"),
+];
 
-if (!fs.existsSync(outputPublicDir)) {
-  console.error("Error: .output/public does not exist. Run vite build first.");
-  process.exit(1);
+const sourceDir = candidateDirs.find((d) => fs.existsSync(d));
+
+if (!sourceDir) {
+  console.log("Notice: No .vercel/output/static or .output/public directory found. Skipping static export.");
+  process.exit(0);
 }
+
+console.log(`Exporting static files from: ${sourceDir}`);
 
 // Clean and recreate dist directory
 if (fs.existsSync(distDir)) {
@@ -16,8 +23,8 @@ if (fs.existsSync(distDir)) {
 }
 fs.mkdirSync(distDir, { recursive: true });
 
-// Copy all assets from .output/public to dist
-fs.cpSync(outputPublicDir, distDir, { recursive: true });
+// Copy all assets from source directory to dist
+fs.cpSync(sourceDir, distDir, { recursive: true });
 
 // Find JS and CSS entry files in dist/assets
 const assetsDir = path.join(distDir, "assets");
@@ -60,5 +67,13 @@ const htmlContent = `<!DOCTYPE html>
 fs.writeFileSync(path.join(distDir, "index.html"), htmlContent, "utf-8");
 fs.writeFileSync(path.join(distDir, "404.html"), htmlContent, "utf-8");
 fs.writeFileSync(path.join(distDir, "200.html"), htmlContent, "utf-8");
+
+const vercelStaticDir = path.join(rootDir, ".vercel", "output", "static");
+if (fs.existsSync(vercelStaticDir)) {
+  fs.writeFileSync(path.join(vercelStaticDir, "index.html"), htmlContent, "utf-8");
+  fs.writeFileSync(path.join(vercelStaticDir, "404.html"), htmlContent, "utf-8");
+  fs.writeFileSync(path.join(vercelStaticDir, "200.html"), htmlContent, "utf-8");
+  console.log("✓ Also synchronized index.html and fallbacks to .vercel/output/static");
+}
 
 console.log("✓ Successfully generated dist/ folder with index.html and static assets ready for deployment!");
