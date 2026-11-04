@@ -12,5 +12,5 @@ export const SITE = {
   testimonials: ["afTqY4cLkMc", "yoKRk4mXz2g", "N0PGjMvKoJs"],
 };
 
-// Session fee in INR — placeholder, update with the real price.
-export const SESSION_FEE_INR = 999;
+// Session fee in INR — webinar fee
+export const SESSION_FEE_INR = 99;

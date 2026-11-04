@@ -136,78 +136,83 @@ function Index() {
 
       {/* HERO SECTION */}
       <section className="relative flex min-h-screen items-center overflow-hidden">
-        {/* Full-Bleed Nature Meditation Background Image with High Mobile Visibility */}
+        {/* Sacred Meditator & Logo Symbol Background Image - Fully Visible & Professional */}
         <img
           src={hero}
-          alt="Woman meditating peacefully in a sunlit garden"
-          width={1600}
-          height={1104}
-          className="absolute inset-0 h-full w-full object-cover object-[55%_center] sm:object-[68%_center]"
+          alt="Holistic healing sanctuary with sacred geometry mandala, chakras and infinity symbol"
+          width={1920}
+          height={1080}
+          className="absolute inset-0 h-full w-full object-cover object-[68%_62%] sm:object-[66%_60%] lg:object-[64%_58%]"
         />
 
-        {/* Soft Feathered Gradient Overlay - mobile uses subtle top-to-bottom so meditating woman & sunlight are vivid & visible */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/45 via-background/15 to-background/75 sm:bg-gradient-to-r sm:from-background/70 sm:via-background/25 sm:to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        {/* Minimal Transparent Scrim - Left subtle shade for text clarity, Right side 100% transparent and vivid */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent sm:from-black/50 sm:via-black/15 pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background/90 to-transparent pointer-events-none" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-5 pb-20 pt-36 lg:pt-44">
+        <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 pt-28 sm:pt-32 lg:pb-20 lg:pt-36">
           <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-6 duration-1000">
-            <p className="eyebrow tracking-[0.25em] text-xs font-bold text-gold uppercase">
-              {t("Holistic Healing Home")}
-            </p>
+            {/* Elegant Forest & Gold Frosted Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full bg-forest/80 px-4 py-1.5 text-xs font-bold tracking-[0.25em] text-gold uppercase backdrop-blur-md border border-gold/40 shadow-lg">
+              <Sparkles className="h-3.5 w-3.5 text-gold animate-pulse" />
+              <span className="text-white">{t("Holistic Healing Home")}</span>
+            </div>
 
-            {/* Find New You - Golden Cursive Script Tagline */}
-            <p className="mt-3 font-script text-5xl sm:text-6xl lg:text-7xl text-gold-gradient font-bold drop-shadow-sm tracking-wide leading-tight">
+            {/* Find New You - Golden Cursive Script */}
+            <p className="mt-2 font-script text-5xl sm:text-6xl lg:text-7xl text-[#F5CE62] font-normal tracking-wide leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
               Find New You
             </p>
 
-            <h1 className="mt-2 font-display text-5xl font-bold leading-[1.05] text-primary sm:text-6xl lg:text-7xl drop-shadow-sm">
+            <h1 className="mt-1.5 font-display text-5xl font-bold leading-[1.08] text-white sm:text-6xl lg:text-7xl drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
               {t("Transform Yourself,")}<br />
-              <span className="italic text-gold-gradient font-normal">
+              <span className="italic text-[#F5CE62] font-medium drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
                 {t("Transform Your Family.")}
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/90 font-medium">
+            <p className="mt-4 sm:mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-white/95 font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               {t(
                 "Discover the power within you through holistic healing, meditation, manifestation and natural healing practices. Begin your journey towards inner peace, emotional wellness and happier family relationships."
               )}
             </p>
 
-            {/* CTA Buttons */}
-            <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Link to="/book" className="btn-gold shadow-gold">
+            {/* CTA Buttons - Gold & Forest Green Harmony */}
+            <div className="mt-7 sm:mt-8 flex flex-wrap items-center gap-4">
+              <Link to="/book" className="btn-gold shadow-gold font-bold">
                 {t("Book Your Session")} <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="#journey" className="btn-outline-forest">
+              <a
+                href="#journey"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-gold/70 bg-forest/85 px-7 py-3.5 text-sm font-bold tracking-wider text-white backdrop-blur-md transition-all duration-300 hover:bg-gold hover:text-forest-dark hover:border-gold shadow-lg"
+              >
                 {t("Start Your Healing Journey")}
               </a>
             </div>
 
-            {/* Animated Counters Strip */}
-            <div className="mt-14 grid max-w-xl grid-cols-3 gap-6 border-t border-gold/40 pt-8">
+            {/* Animated Counters Strip - Gold & White with Gold Divider */}
+            <div className="mt-10 sm:mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-gold/30 pt-6 sm:pt-7">
               <div>
-                <p className="font-display text-4xl font-bold text-gold-gradient sm:text-5xl">
+                <p className="font-display text-4xl font-bold text-[#F5CE62] sm:text-5xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
                   <AnimatedCounter end={4} suffix="+" duration={1800} />
                 </p>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground sm:text-sm">
+                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-white/90 sm:text-sm drop-shadow-sm">
                   {t("Years of Healing Experience")}
                 </p>
               </div>
 
               <div>
-                <p className="font-display text-4xl font-bold text-gold-gradient sm:text-5xl">
+                <p className="font-display text-4xl font-bold text-[#F5CE62] sm:text-5xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
                   <AnimatedCounter end={2000} suffix="+" duration={2400} />
                 </p>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground sm:text-sm">
+                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-white/90 sm:text-sm drop-shadow-sm">
                   {t("People Supported")}
                 </p>
               </div>
 
               <div>
-                <p className="font-display text-4xl font-bold text-gold-gradient sm:text-5xl">
+                <p className="font-display text-4xl font-bold text-[#F5CE62] sm:text-5xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
                   <AnimatedCounter end={9} suffix="+" duration={1600} />
                 </p>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground sm:text-sm">
+                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-white/90 sm:text-sm drop-shadow-sm">
                   {t("Holistic Healing Modalities")}
                 </p>
               </div>
